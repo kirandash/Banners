@@ -2,7 +2,26 @@
     border: 1px solid #000;
     width: 300px;
     height: 250px;
-    padding: 4px;
-    box-sizing: border-box;
-    overflow: hidden;
+    background: #e12c2c;
+    font-family: sans-serif;
+    color: white;
+}
+
+.banner h1 {
+    text-align: center;
+    margin: 0px;
+}
+
+.banner p {
+    position: relative;
+    right: -162px;
+    margin: 0;
+}
+
+.banner img {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: -120px;
+    left: -120px;
 }

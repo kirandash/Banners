@@ -2,4 +2,14 @@
     border: 1px solid #000;
     width: 300px;
     height: 250px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.banner .section {
+    width: 31%;
+    height:  238px;
+    float: left;
+    margin-right: 6px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }

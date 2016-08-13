@@ -2,26 +2,66 @@
     border: 1px solid #000;
     width: 300px;
     height: 250px;
-    background: #e12c2c;
+    background: linear-gradient(#F00, #BA0606);
     font-family: sans-serif;
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.grad {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(#BA0606, #F00);
+    transform: skew(-25deg);
+    transform-origin: 0 400px;
+    position: absolute;
+    z-index: 10;
 }
 
 .banner h1 {
     text-align: center;
     margin: 0px;
+    position: relative;
+    z-index: 100;
 }
 
 .banner p {
     position: relative;
+    z-index: 100;
     right: -162px;
     margin: 0;
 }
 
 .banner img {
-    width: 100%;
-    height: 250px;
+    max-width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: -60px;
+    z-index: 100;
+    transition: transform 1s ease;
+}
+
+.banner img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.bg {
+    font-size: 90px;
     position: relative;
-    top: -120px;
-    left: -120px;
+    z-index: 100;
+    margin: 0px;
+    left: 65px;
+    font-family: cursive;
+    color: #d2d2d2;
+    top: 30px;
+    transition: transform 1s ease;
+    text-align: center;
+}
+
+.banner .bg:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }

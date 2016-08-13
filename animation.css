@@ -1,0 +1,36 @@
+.banner {
+    border: 1px solid #000;
+    width: 300px;
+    height: 250px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+@-moz-keyframes animation1 {
+    0% {
+        color: red;
+        left: 0px;
+    }
+    100% {
+        color: blue;
+        left: 250px;
+    }
+}
+
+@-webkit-keyframes animation1 {
+    0% {
+        color: red;
+        left: 0px;
+    }
+    100% {
+        color: blue;
+        left: 250px;
+    }
+}
+
+.text {
+    /*-webkit-animation: animation1 1s infinite;*/
+    -webkit-animation: animation1 1s forwards;
+    animation: animation1 1s forwards;
+    position: relative;
+}

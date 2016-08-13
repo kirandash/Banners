@@ -11,19 +11,49 @@
     height: 238px;
 }
 
+@-moz-keyframes door {
+    0% { transform: perspective(600px) rotateY(90deg); }
+    100% { transform: perspective(600px) rotateY(00deg); }
+}
+
+@-webkit-keyframes door {
+    0% { transform: perspective(600px) rotateY(90deg); }
+    100% { transform: perspective(600px) rotateY(00deg); }
+}
+
 .banner .sec1 {
     background: url('images/wordpress-banner3.png') no-repeat -30px 45px/150px auto #e44d26;
+    transform: perspective(600px) rotateY(90deg);
+    transform-origin: 0px;
+    -moz-animation: door 1s forwards;
+    -webkit-animation: door 1s forwards;
+    animation: door 1s forwards;
 }
 
 .banner .sec2 {
     background: url('images/html-banner3.png') no-repeat -30px 45px/150px auto #3b9adb;
+    transform: perspective(600px) rotateY(90deg);
+    transform-origin: 0px;
+    -moz-animation: door 1s forwards 1s;
+    -webkit-animation: door 1s forwards 1s;
+    animation: door 1s forwards 1s;    
 }
 
 .banner .sec3 {
-    background: url('images/css-banner3.png') no-repeat -30px 30px/150px auto #e44d26;
+    background: url('images/css-banner3.png') no-repeat -30px 46px/150px auto #e44d26;
+    transform: perspective(600px) rotateY(90deg);
+    transform-origin: 0px;
+    -moz-animation: door 1s forwards 2s;
+    -webkit-animation: door 1s forwards 2s;
+    animation: door 1s forwards 2s;    
 }
 
 .banner .section:hover {
     border: 1px solid red;
     cursor: pointer;
+}
+
+.banner h2 {
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }

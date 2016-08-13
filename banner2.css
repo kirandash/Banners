@@ -2,6 +2,7 @@
     border: 1px solid #000;
     width: 300px;
     height: 250px;
+    background: -webkit-linear-gradient(#F00, #BA0606);
     background: linear-gradient(#F00, #BA0606);
     font-family: sans-serif;
     color: white;
@@ -12,8 +13,11 @@
 .grad {
     width: 100%;
     height: 250px;
+    background: -webkit-linear-gradient(#BA0606, #F00);
     background: linear-gradient(#BA0606, #F00);
+    -webkit-transform: skew(-25deg);
     transform: skew(-25deg);
+    -webkit-transform-origin: 0 400px;
     transform-origin: 0 400px;
     position: absolute;
     z-index: 10;
@@ -24,13 +28,17 @@
     margin: 0px;
     position: relative;
     z-index: 100;
+    -webkit-animation: text-slide 1s forwards;
+    animation: text-slide 1s forwards;
 }
 
 .banner p {
     position: relative;
     z-index: 100;
-    right: -162px;
+    right: -160px;
     margin: 0;
+    -webkit-animation: left-text-slide 1s forwards;
+    animation: left-text-slide 1s forwards;
 }
 
 .banner img {
@@ -40,10 +48,16 @@
     top: 50px;
     left: -60px;
     z-index: 100;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
     transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+    -webkit-animation: img-slide 1s forwards;
+    animation: img-slide 1s forwards;
 }
 
 .banner img:hover {
+    -webkit-transform: scale(1.2);
     transform: scale(1.2);
     cursor: pointer;
 }
@@ -57,11 +71,89 @@
     font-family: cursive;
     color: #d2d2d2;
     top: 30px;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
     transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
     text-align: center;
+    -webkit-animation: bg-slide 1s forwards;
+    animation: bg-slide 1s forwards;   
 }
 
 .banner .bg:hover {
+    -webkit-transform: scale(1.2);
     transform: scale(1.2);
     cursor: pointer;
+}
+
+@-moz-keyframes text-slide {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@-webkit-keyframes text-slide {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@-moz-keyframes left-text-slide {
+    0% {
+        right: -300px;
+    }
+    100% {
+        right: -160px;
+    }
+}
+
+@-webkit-keyframes left-text-slide {
+    0% {
+        right: -300px;
+    }
+    100% {
+        right: -160px;
+    }
+}
+
+@-moz-keyframes img-slide {
+    0% {
+        left: -400px;
+    }
+    100% {
+        left: -50px;
+    }
+}
+
+@-webkit-keyframes img-slide {
+    0% {
+        left: -400px;
+    }
+    100% {
+        left: -50px;
+    }
+}
+
+@-moz-keyframes bg-slide {
+    0% {
+        left: 300px;
+    }
+    100% {
+        left: 80px;
+    }
+}
+
+@-webkit-keyframes bg-slide {
+    0% {
+        left: 300px;
+    }
+    100% {
+        left: 80px;
+    }
 }
